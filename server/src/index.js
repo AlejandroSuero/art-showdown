@@ -1,10 +1,15 @@
+// imports from node_modules
 const express = require('express');
 const morgan = require('morgan');
 const helmet = require('helmet');
 const cors = require('cors');
-const { errorHandler, notFound } = require('./middlewares');
+
+// imports from files
+const middlewares = require('./middlewares');
 
 const app = express();
+
+// Middlewares
 app.use(morgan('common'));
 app.use(helmet());
 app.use(cors({
@@ -17,10 +22,11 @@ app.get('/', (req, res) => {
   });
 });
 
-app.use(notFound);
+// Middlewares error handlers
+app.use(middlewares.notFound);
+app.use(middlewares.errorHandler);
 
-app.use(errorHandler);
-
+// Set port and listen
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   // eslint-disable-next-line no-console

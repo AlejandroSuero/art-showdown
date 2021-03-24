@@ -10,8 +10,8 @@
 # Server
 
   - Documentation
-    - [Setting up server folder]()
-    - [Setting up enviroment variables]()
+    - [Setting up server folder](https://github.com/AlejandroSuero/art-showdown/tree/master/server#folder-set-up)
+    - [Setting up enviroment variables](https://github.com/AlejandroSuero/art-showdown/tree/master/server#enviroment-variables)
     - [Backend structure](https://github.com/AlejandroSuero/art-showdown/tree/master/server#backend-structure)
 
 

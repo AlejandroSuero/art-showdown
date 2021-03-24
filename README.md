@@ -2,4 +2,4 @@
 
 The web YOU need to make your portfolio look clean for your next client.
 
-![](https://gph.is/g/amWx954)
+![PERFECTION](https://media.giphy.com/media/POZulBhYwuOI2Dg7oX/giphy.gif)

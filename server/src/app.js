@@ -9,6 +9,9 @@ require('dotenv').config();
 
 // imports from files
 const middlewares = require('./middlewares');
+const auth = require('./routes/auth');
+const login = require('./routes/login');
+const signup = require('./routes/signup');
 const users = require('./api/users');
 
 // Connection to DB
@@ -27,11 +30,15 @@ app.use(cors({
 app.use(express.json());
 
 app.get('/', (req, res) => {
+  res.status(200);
   res.json({
-    message: 'Hello World!',
+    message: 'Hello World!!',
   });
 });
 
+app.use('/login', login);
+app.use('/signup', signup);
+app.use('/auth', auth);
 app.use('/api/users', users);
 
 // Middlewares error handlers
